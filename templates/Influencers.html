@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ Titulo }}</title>
+    <link rel="stylesheet" href="static/estilo.css">
+</head>
+<body>
+    <div>
+        <h1>{{ Titulo }}</h1>
+    </div>
+
+    {% for Influencer in ListaInfluencers %}
+
+        <div class="influencer-card">
+            <h2>Nome: {{ Influencer.nome }}</h2>
+            <img src="static/influ.jpg">
+            <p>Plataforma Social: {{ Influencer.plataformasSociais }}</p>
+            <p>Número de seguidores: {{ Influencer.numeroSeguidores }} Followers</p>
+            <p>Área de interesse: {{ Influencer.areaInteresse }}</p>
+        <br>
+        </div>
+
+    {% endfor %}
+
+</body>
+</html>
